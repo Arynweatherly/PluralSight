@@ -44,12 +44,12 @@ using System.Collections.Generic;
 
 namespace GradeBook
 {
-    //define a new class 
+
     class Program
     {
         static void Main(string[] args)
         {
-            var book = new Book();
+            var book = new Book("Aryn's Gradebook");
             book.AddGrade(89.1);
             
            //initialization syntax
@@ -62,7 +62,7 @@ namespace GradeBook
             {
                 result += number;
             }
-            result /= grades.Count; //
+            result /= grades.Count; 
 Console.WriteLine($"The average grade is {result:N1}");
 
           

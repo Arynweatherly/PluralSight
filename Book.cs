@@ -4,9 +4,10 @@ namespace GradeBook{
     class Book 
     { 
         //constructor
-        public Book()
+        public Book(string name)
         {
-            
+            grades = new List<double>();
+            this.name = name;
         }
         //make method for adding a grade . type is double and name of parameter is grade
     
@@ -14,6 +15,7 @@ namespace GradeBook{
         {
             grades.Add(grade);
         }
-        List<double> grades;
+        private List<double> grades;
+        private string name;
     }
 }
