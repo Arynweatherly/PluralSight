@@ -62,17 +62,17 @@ namespace GradeBook
            
             var result = 0.0;
 
-            //want to find highest grade in this list 
             var highGrade = double.MinValue;
-            //iterate over the lsit
+            var lowGrade = double.MaxValue;
+
             foreach(var number in grades) 
             {
-                if(number > highGrade) {
-                    highGrade = number;
-                }
+              lowGrade = Math.Min(number, lowGrade);
+              highGrade = Math.Max(number, highGrade);  
                 result += number;
             }
             result /= grades.Count; 
+            Console.WriteLine($"the lowest grade is {lowGrade}");
             Console.WriteLine($"The average grade is {result:N1}");
 
           
