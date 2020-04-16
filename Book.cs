@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 
 namespace GradeBook{
-    class Book 
+   public class Book 
     { 
         //constructor
         public Book(string name)
@@ -18,21 +18,25 @@ namespace GradeBook{
         }
    
 
-        public void ShowStatistics()
+        public Statistics GetStatistics() //public method named getstatistics and its return type (type of obj it will return) is Statistics
         {
-            var result = 0.0;
-            var highGrade = double.MinValue;
-            var lowGrade = double.MaxValue;
+            var result = new Statistics();
+            result.Average = 0.0;
+         
+            result.High = double.MinValue;
+            result.Low = double.MaxValue;
 
-            foreach(var number in grades) 
+            foreach(var grade in grades) 
             {
-              lowGrade = Math.Min(number, lowGrade);
-              highGrade = Math.Max(number, highGrade);  
-                result += number;
+              result.Low = Math.Min(grade, result.Low); //take result.low and compare it to existing result.Low
+              result.High = Math.Max(grade, result.High);  
+                result.Average += grade;
             }
-            result /= grades.Count; 
-            Console.WriteLine($"the lowest grade is {lowGrade}");
-            Console.WriteLine($"The average grade is {result:N1}");
+            result.Average /= grades.Count; 
+
+             //how do i return the statistics ive computed?
+
+            return result;
 
         }
 
