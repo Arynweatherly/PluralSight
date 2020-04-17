@@ -33,6 +33,10 @@ namespace GradeBook{
             //foreach(var grade in grades)
             for(var index = 0; index < grades.Count; index += 1)
             {
+                if(grades[index] == 42.1)
+                {
+                    break; //results in us skipping the 3 lines of code following this
+                }
               result.Low = Math.Min(grades[index], result.Low); //take result.low and compare it to existing result.Low
               result.High = Math.Max(grades[index], result.High);  
               result.Average += grades[index];
