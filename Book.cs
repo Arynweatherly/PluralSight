@@ -10,8 +10,9 @@ namespace GradeBook{
             grades = new List<double>();
             Name = name;
         }
+  
 
-        public void AddLetterGrade(char letter) //char is a value type
+        public void AddGrade(char letter) //char is a value type
         {
             switch(letter) 
             {
@@ -97,6 +98,26 @@ namespace GradeBook{
         }
 
         private List<double> grades;
-        public string Name;
+    //ong hand declare public property and type
+
+    public string Name
+    {
+        get 
+        {
+            return name.ToUpper();
+            //inside here is the code thats going to execute when someone wants to read the name property
+
+        }
+
+        set
+        {
+            if (string.IsNullOrEmpty(value))
+            {
+            name = value;
+            }
+        }
+    }
+
+        public string name;
     }
 }
