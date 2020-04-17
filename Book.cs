@@ -10,8 +10,12 @@ namespace GradeBook{
             grades = new List<double>();
             Name = name;
         }
+        public string AddGrade(char letter, int x)
+        {
+            return "";
+        }
 
-        public void AddLetterGrade(char letter) //char is a value type
+        public void AddGrade(char letter) //char is a value type
         {
             switch(letter) 
             {
