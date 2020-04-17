@@ -31,14 +31,11 @@ namespace GradeBook{
             result.Low = double.MaxValue;
 
             //foreach(var grade in grades)
-            var index = 0;
-            while(index < grades.Count) 
+            for(var index = 0; index < grades.Count; index += 1)
             {
               result.Low = Math.Min(grades[index], result.Low); //take result.low and compare it to existing result.Low
               result.High = Math.Max(grades[index], result.High);  
               result.Average += grades[index];
-              //write condition in while statement that tells when to terminate loop
-                index += 1;
             };
             result.Average /= grades.Count; 
 
