@@ -40,9 +40,9 @@ namespace GradeBook{
             {
                 grades.Add(grade);
             }
-            else 
+            else //how to create an exception:
             {
-                Console.WriteLine("Invalid Value");
+                throw new ArgumentException($"Invalid {nameof(grade)}");
             }
         }
    
