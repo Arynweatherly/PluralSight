@@ -50,21 +50,20 @@ namespace GradeBook
         static void Main(string[] args)
         {
             var book = new Book("Aryn's Gradebook");
-            //loop that continually asks to enter grade on console
-            var done = false;
+        
 
-            while(!done)
+            while(true)
             {
                 Console.WriteLine("Enter a grade or 'q' to quit");
                  var input = Console.ReadLine();
-                 
+
                  if(input == "q")
                  {
-                     done = true;
-                     continue;
+                     break;
                  }
 
-                var grade = double.Parse(input);
+                var grade = double.Parse(input); //parsing input into a double
+                book.AddGrade(grade);
             }
 
 
