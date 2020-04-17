@@ -14,7 +14,11 @@ namespace GradeBook{
     
         public void AddGrade(double grade) 
         {
-            grades.Add(grade);
+            if(grade <= 100 && grade >= 0)
+            {
+                grades.Add(grade);
+
+            }
         }
    
 
@@ -26,12 +30,16 @@ namespace GradeBook{
             result.High = double.MinValue;
             result.Low = double.MaxValue;
 
-            foreach(var grade in grades) 
+            //foreach(var grade in grades)
+            var index = 0;
+            do 
             {
-              result.Low = Math.Min(grade, result.Low); //take result.low and compare it to existing result.Low
-              result.High = Math.Max(grade, result.High);  
-                result.Average += grade;
-            }
+              result.Low = Math.Min(grades[index], result.Low); //take result.low and compare it to existing result.Low
+              result.High = Math.Max(grades[index], result.High);  
+              result.Average += grades[index];
+              //write condition in while statement that tells when to terminate loop
+                index += 1;
+            } while(index < grades.Count);
             result.Average /= grades.Count; 
 
              //how do i return the statistics ive computed?
