@@ -102,21 +102,9 @@ namespace GradeBook{
 
     public string Name
     {
-        get 
-        {
-            return name.ToUpper();
-            //inside here is the code thats going to execute when someone wants to read the name property
-
-        }
-
-        set
-        {
-            if (string.IsNullOrEmpty(value))
-            {
-            name = value;
-            }
-        }
+        get; set;
     }
+    
 
         public string name;
     }
