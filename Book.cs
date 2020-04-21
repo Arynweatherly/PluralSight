@@ -43,7 +43,7 @@ namespace GradeBook{
             }
             else //how to create an exception:
             {
-                throw new ArgumentException($"Invalid {nameof(grade)}"); //throwing exception and someone else has to catch it if they want to handle the condition
+                throw new ArgumentException($"INVALID {nameof(grade)}"); //throwing exception and someone else has to catch it if they want to handle the condition
             }
         }
    
