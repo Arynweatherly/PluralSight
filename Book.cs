@@ -98,7 +98,6 @@ namespace GradeBook{
         }
 
         private List<double> grades;
-    //ong hand declare public property and type
 
     public string Name
     {
