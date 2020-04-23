@@ -12,7 +12,7 @@ namespace GradeBook{
         }
   
 
-        public void AddGrade(char letter) //char is a value type
+        public void AddGrade(char letter) 
         {
             switch(letter) 
             {
