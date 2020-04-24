@@ -101,10 +101,12 @@ namespace GradeBook{
 
     public string Name
     {
-        get; set;
+        get; 
+        private set;
     }
     
-
+//define a field thats read only
+readonly string category = "Science";
         public string name;
     }
 }
