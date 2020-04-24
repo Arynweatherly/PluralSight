@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace GradeBook{
    public class Book 
     { 
-        //constructor
+        //this is a constructor method
         public Book(string name)
         {
             grades = new List<double>();
