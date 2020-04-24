@@ -7,6 +7,7 @@ namespace GradeBook{
         //this is a constructor method
         public Book(string name)
         {
+            
             grades = new List<double>();
             Name = name;
         }
@@ -105,8 +106,8 @@ namespace GradeBook{
         private set;
     }
     
-//define a field thats read only
-readonly string category = "Science";
-        public string name;
+
+public const string CATEGORY = "Science";  //you access a static member using the type name 
+  
     }
 }
