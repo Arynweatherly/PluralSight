@@ -51,6 +51,13 @@ namespace GradeBook
         {
             var book = new Book("Aryn's Gradebook");
         
+        //if we want to handle all the AddGrade events we would..
+        //create method that can be invoked when raises event. 
+        book.GradeAdded += OnGradeAdded;
+        book.GradeAdded += OnGradeAdded;
+        book.GradeAdded += OnGradeAdded;
+        book.GradeAdded -= OnGradeAdded;
+
 
             while(true)
             {
@@ -91,6 +98,11 @@ namespace GradeBook
             Console.WriteLine($"The average grade is {stats.Average:N1}");
             Console.WriteLine($"The letter grade is {stats.Letter}");
 
+    }
+
+    static void OnGradeAdded(object sender, EventArgs e)
+    {
+            Console.WriteLine( "A grade was added");
     }
 }
 }
