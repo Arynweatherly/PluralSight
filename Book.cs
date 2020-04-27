@@ -38,11 +38,17 @@ namespace GradeBook{
         }
 
 
+        //want to invoke the delegate inside of addgrade
+
         public void AddGrade(double grade) 
         {
             if(grade <= 100 && grade >= 0)
             {
                 grades.Add(grade);
+                if(GradeAdded != null)
+                {
+                    GradeAdded(this, new EventArgs()); //eventargs is where you can pass along additional information about this event 
+                }
             }
             else //how to create an exception:
             {
@@ -53,8 +59,9 @@ namespace GradeBook{
 
    //event can be a member of a class 
    //type is GradeAddedDelegate name is GradeAdded
+   //now have a book class definition and every book object wil have a grade added event
 
-   public GradeAddedDelegate GradeAdded;
+   public event GradeAddedDelegate GradeAdded; //this is just a field on the book class
 
         public Statistics GetStatistics()
         {
