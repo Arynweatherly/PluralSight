@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 
 namespace GradeBook{
+
+    public delegate void GradeAddedDelegate(object sender, EventArgs args);
    public class Book 
     { 
         //this is a constructor method
@@ -48,6 +50,11 @@ namespace GradeBook{
             }
         }
    
+
+   //event can be a member of a class 
+   //type is GradeAddedDelegate name is GradeAdded
+
+   public GradeAddedDelegate GradeAdded;
 
         public Statistics GetStatistics()
         {
