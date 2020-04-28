@@ -4,6 +4,20 @@ using System.Collections.Generic;
 namespace GradeBook{
 
     public delegate void GradeAddedDelegate(object sender, EventArgs args);
+
+    //create new class called namedobject and w/in it create a property w/ the name of Name 
+    public class namedobject
+    {
+        public string Name
+        {
+            get; set;
+        }
+    }
+//we will now use this class definition as the base class for all other types we want to build 
+
+
+
+
    public class Book 
     { 
         //this is a constructor method
