@@ -54,10 +54,7 @@ namespace GradeBook
         //if we want to handle all the AddGrade events we would..
         //create method that can be invoked when raises event. 
         book.GradeAdded += OnGradeAdded;
-        book.GradeAdded += OnGradeAdded;
-        book.GradeAdded += OnGradeAdded;
-        book.GradeAdded -= OnGradeAdded;
-
+    
 
             while(true)
             {

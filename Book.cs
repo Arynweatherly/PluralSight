@@ -6,7 +6,7 @@ namespace GradeBook{
     public delegate void GradeAddedDelegate(object sender, EventArgs args);
 
     //create new class called namedobject and w/in it create a property w/ the name of Name 
-    public class namedobject
+    public class Namedobject
     {
         public string Name
         {
@@ -18,10 +18,10 @@ namespace GradeBook{
 
 
 
-   public class Book 
+   public class Book : Namedobject //book has a name but book is a namedobject
     { 
         //this is a constructor method
-        public Book(string name)
+        public Book(string name) //book requires a name to be instantiated
         {
             
             grades = new List<double>();
@@ -128,12 +128,6 @@ namespace GradeBook{
 
         private List<double> grades;
 
-    public string Name
-    {
-        get; 
-        set;
-    }
-    
 
 public const string CATEGORY = "Science";  //you access a static member using the type name 
   
