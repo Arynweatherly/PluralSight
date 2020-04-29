@@ -8,6 +8,13 @@ namespace GradeBook{
     //create new class called namedobject and w/in it create a property w/ the name of Name 
     public class Namedobject
     {
+        //create non-default constructor(requires name param)
+        public Namedobject(string name)
+        {
+            Name = name; //Name property equals this incoming name value 
+        }
+
+
         public string Name
         {
             get; set;
@@ -18,10 +25,11 @@ namespace GradeBook{
 
 
 
-   public class Book : Namedobject //book has a name but book is a namedobject
+   public class Book : Namedobject //derived from namedobject
     { 
         //this is a constructor method
-        public Book(string name) //book requires a name to be instantiated
+        //book requires a name to be instantiated
+        public Book(string name) : base(name)
         {
             
             grades = new List<double>();
