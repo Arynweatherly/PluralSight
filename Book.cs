@@ -21,7 +21,7 @@ namespace GradeBook{
    public class Book : Namedobject //book has a name but book is a namedobject
     { 
         //this is a constructor method
-        public Book(string name)
+        public Book(string name) //book requires a name to be instantiated
         {
             
             grades = new List<double>();
