@@ -5,8 +5,7 @@ namespace GradeBook{
 
     public delegate void GradeAddedDelegate(object sender, EventArgs args);
 
-    //create new class called namedobject and w/in it create a property w/ the name of Name 
-    public class Namedobject
+    public class Namedobject : Object //if dont specify base class everything will derive from object
     {
         //create non-default constructor(requires name param)
         public Namedobject(string name)
