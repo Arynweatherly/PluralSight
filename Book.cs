@@ -26,7 +26,10 @@ namespace GradeBook{
 //goal is polymorphism so that classes derived from bookBase can have different implementations of addgrade
 public abstract class BookBase
 {
-
+    public void AddGrade(double grade)
+    {
+        
+    }
 }
 
    public class Book : Namedobject //derived from namedobject
