@@ -22,7 +22,12 @@ namespace GradeBook{
 //we will now use this class definition as the base class for all other types we want to build 
 
 
+//abstract class
+//goal is polymorphism so that classes derived from bookBase can have different implementations of addgrade
+public abstract class BookBase
+{
 
+}
 
    public class Book : Namedobject //derived from namedobject
     { 
