@@ -19,22 +19,36 @@ namespace GradeBook{
             get; set;
         }
     }
+
+    public interface IBook 
+    {
+        void AddGrade(double grade);
+        Statistics GetStatistics();
+        string Name { get; }
+        event GradeAddedDelegate GradeAdded;
+    }
 //we will now use this class definition as the base class for all other types we want to build 
 
 
 //abstract class
 //goal is polymorphism so that classes derived from bookBase can have different implementations of addgrade
-public abstract class Book : Namedobject
+public abstract class Book : Namedobject, IBook
 {
         public Book(string name) : base(name)
         {
         }
 
-        public abstract void AddGrade(double grade);
-  
-}
+        public virtual event GradeAddedDelegate GradeAdded;
 
-   public class InMemoryBook : Book //derived from namedobject
+        public abstract void AddGrade(double grade);
+
+        public virtual Statistics GetStatistics()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+   public class InMemoryBook : Book//derived from namedobject
     { 
         //this is a constructor method
         //book requires a name to be instantiated
@@ -92,9 +106,9 @@ public abstract class Book : Namedobject
    //type is GradeAddedDelegate name is GradeAdded
    //now have a book class definition and every book object wil have a grade added event
 
-   public event GradeAddedDelegate GradeAdded; //this is just a field on the book class
+   public override event GradeAddedDelegate GradeAdded; //this is just a field on the book class
 
-        public Statistics GetStatistics()
+        public override Statistics GetStatistics()
         {
             var result = new Statistics();
             result.Average = 0.0;
