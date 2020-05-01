@@ -49,7 +49,7 @@ namespace GradeBook
     {
         static void Main(string[] args)
         {
-            var book = new Book("Aryn's Gradebook");
+            var book = new InMemoryBook("Aryn's Gradebook");
 
             //if we want to handle all the AddGrade events we would..
             //create method that can be invoked when raises event. 
@@ -58,7 +58,7 @@ namespace GradeBook
             EnterGrades(book);
 
             var stats = book.GetStatistics();
-            Console.WriteLine(Book.CATEGORY);
+            Console.WriteLine(InMemoryBook.CATEGORY);
             Console.WriteLine($"For the book named {book.Name}");
             Console.WriteLine($"the lowest grade is {stats.Low}");
             Console.WriteLine($"the highest grade is {stats.High}");

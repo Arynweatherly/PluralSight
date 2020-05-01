@@ -24,19 +24,21 @@ namespace GradeBook{
 
 //abstract class
 //goal is polymorphism so that classes derived from bookBase can have different implementations of addgrade
-public abstract class BookBase
+public abstract class Book : Namedobject
 {
-    public void AddGrade(double grade)
-    {
-        
-    }
+        public Book(string name) : base(name)
+        {
+        }
+
+        public abstract void AddGrade(double grade);
+  
 }
 
-   public class Book : Namedobject //derived from namedobject
+   public class InMemoryBook : Book //derived from namedobject
     { 
         //this is a constructor method
         //book requires a name to be instantiated
-        public Book(string name) : base(name)
+        public InMemoryBook(string name) : base(name)
         {
             
             grades = new List<double>();
@@ -69,7 +71,7 @@ public abstract class BookBase
 
         //want to invoke the delegate inside of addgrade
 
-        public void AddGrade(double grade) 
+        public override void AddGrade(double grade) 
         {
             if(grade <= 100 && grade >= 0)
             {
