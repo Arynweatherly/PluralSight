@@ -27,7 +27,6 @@ namespace GradeBook{
         string Name { get; }
         event GradeAddedDelegate GradeAdded;
     }
-//we will now use this class definition as the base class for all other types we want to build 
 
 
 //abstract class
