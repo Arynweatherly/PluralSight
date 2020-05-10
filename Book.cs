@@ -30,10 +30,6 @@ namespace GradeBook{
 
 
 
-
-
-
-
 //abstract class
 //goal is polymorphism so that classes derived from bookBase can have different implementations of addgrade
 public abstract class Book : Namedobject, IBook
