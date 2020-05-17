@@ -65,6 +65,8 @@ public abstract class Book : Namedobject, IBook
             writer.WriteLine(grade);
                }
 
+
+
         public override Statistics GetStatistics()
         {
             throw new NotImplementedException();
