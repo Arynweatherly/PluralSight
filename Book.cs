@@ -55,6 +55,8 @@ public abstract class Book : Namedobject, IBook
         {
         }
 
+
+
         public override event GradeAddedDelegate GradeAdded;
 
         public override void AddGrade(double grade)
