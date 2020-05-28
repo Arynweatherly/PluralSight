@@ -116,11 +116,6 @@ public abstract class Book : Namedobject, IBook
 
 
 
-
-
-
-
-
         //want to invoke the delegate inside of addgrade
 
         public override void AddGrade(double grade) 
@@ -138,6 +133,12 @@ public abstract class Book : Namedobject, IBook
                 throw new ArgumentException($"INVALID {nameof(grade)}"); //throwing exception and someone else has to catch it if they want to handle the condition
             }
         }
+
+
+
+
+
+        
    
 
    //event can be a member of a class 
