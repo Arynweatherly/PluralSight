@@ -134,8 +134,6 @@ public abstract class Book : Namedobject, IBook
    
 
 
-
-
    //event can be a member of a class 
    //type is GradeAddedDelegate name is GradeAdded
    //now have a book class definition and every book object wil have a grade added event
