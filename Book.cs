@@ -63,8 +63,16 @@ public abstract class Book : Namedobject, IBook
 
         //write code so that every time this method envoked itll open file that has the same name as book and write new line into file that contains grade value
         {
-            var writer = File.AppendText($"{Name}.txt");
+
+            //wrap idisposable object w/ using statment
+            using(var writer = File.AppendText($"{Name}.txt"))
+            {
             writer.WriteLine(grade);
+            if(GradeAdded != null)
+            {
+                GradeAdded(this, new EventArgs());
+            }
+            }
                }
 
 
