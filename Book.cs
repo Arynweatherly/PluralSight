@@ -76,9 +76,6 @@ public abstract class Book : Namedobject, IBook
                }
 
 
-
-
-
         public override Statistics GetStatistics()
         {
             throw new NotImplementedException();
