@@ -83,7 +83,6 @@ public abstract class Book : Namedobject, IBook
     }
 
 
-
     public class InMemoryBook : Book//derived from namedobject
     { 
         //this is a constructor method
