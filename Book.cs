@@ -148,6 +148,9 @@ public abstract class Book : Namedobject, IBook
         public override Statistics GetStatistics()
         {
             var result = new Statistics();
+
+            //code like this is initializing all the values on satistics class.
+            //should go in a constructor for statistics and be automatically executed when invoke the new keyword 
             result.Average = 0.0;
          
             result.High = double.MinValue;
