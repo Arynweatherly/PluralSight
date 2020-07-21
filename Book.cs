@@ -78,7 +78,22 @@ public abstract class Book : Namedobject, IBook
 
         public override Statistics GetStatistics()
         {
-            throw new NotImplementedException();
+            var result = new Statistics();
+
+            using(var reader = File.OpenText($"{Name}.txt"))
+            {
+                //store result of readline into a variable
+              var line = reader.ReadLine();
+              while(line != null)
+              //take line and parse it into a number
+              {
+                  var number = double.Parse(line);
+                  result.Add(number);
+                  line = reader.ReadLine();
+              }
+            }
+
+            return result;
         }
     }
 
