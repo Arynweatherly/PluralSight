@@ -153,11 +153,7 @@ public abstract class Book : Namedobject, IBook
 
             //code like this is initializing all the values on satistics class.
             //should go in a constructor for statistics and be automatically executed when invoke the new keyword 
-            result.Average = 0.0;
-         
-            result.High = double.MinValue;
-            result.Low = double.MaxValue;
-
+       
             //foreach(var grade in grades)
             for(var index = 0; index < grades.Count; index += 1)
             {
