@@ -144,6 +144,7 @@ public abstract class Book : Namedobject, IBook
    //now have a book class definition and every book object wil have a grade added event
 
 
+
    public override event GradeAddedDelegate GradeAdded; //this is just a field on the book class
 
         public override Statistics GetStatistics()
