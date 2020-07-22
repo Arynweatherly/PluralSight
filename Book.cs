@@ -70,7 +70,6 @@ public abstract class Book : Namedobject, IBook
             {
                 GradeAdded(this, new EventArgs());
             }
-
             
             }
                }
