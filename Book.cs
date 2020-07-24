@@ -14,7 +14,6 @@ namespace GradeBook{
             Name = name; //Name property equals this incoming name value 
         }
 
-
         public string Name
         {
             get; set;
